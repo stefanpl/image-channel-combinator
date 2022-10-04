@@ -1,0 +1,27 @@
+{
+  "name": "image-channel-combinator-pbr",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "npx tsc --noEmit",
+    "lint-base": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "npm run lint-base -- --max-warnings 0",
+    "lint-fix": "npm run lint-base -- --fix",
+    "full-check": "npm run typecheck && npm run lint && echo \"✅ All good!\"",
+    "watch": "npx chokidar 'dist/**/*' -c \"clear && date && echo '\n' && node --no-warnings --experimental-specifier-resolution=node dist/index.js\"",
+    "watch-ts": "npx tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/sharp": "^0.31.0",
+    "chokidar-cli": "^3.0.0",
+    "globby": "^13.1.2",
+    "sharp": "^0.31.1",
+    "typescript": "^4.8.4"
+  }
+}
