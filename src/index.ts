@@ -27,6 +27,10 @@ const out = join(getPath().OUT_DIR, "combined.png");
 
 const newFile = await sharp(aoFile).joinChannel(roughnessFile).toFile(out);
 
+// groundMat.useAmbientOcclusionFromMetallicTextureRed = true;
+// groundMat.useMetallnessFromMetallicTextureBlue = true;
+// groundMat.useRoughnessFromMetallicTextureGreen = true;
+
 const channelData: {
   fileGlob: string;
   color: ColorChannel;
